@@ -45,3 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 /debug.log
+/.vs/objs_frontend/v16/.suo
+/.vs/objs_frontend/config/applicationhost.config
