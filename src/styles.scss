@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$edge: 1rem;
+$bgColor: #929292;
+$fgColor: #2c2c2c;
+
+.content {
+    color: $fgColor;
+    background-color: $bgColor;
+}
+
+.edge-inside {
+    padding: $edge;
+}
+
+.edge-outside {
+    margin: $edge;
+}
