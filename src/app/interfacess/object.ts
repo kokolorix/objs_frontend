@@ -2,7 +2,7 @@
 
 
 export interface Value {
-    value:object;
+    // value:object;
 }
 
 export interface Property {
