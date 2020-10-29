@@ -2,12 +2,13 @@
 
 
 export interface IValue {
-    // value:object;
+    str: string;
 }
 
 export interface IProperty {
     name:string;
     value:IValue;
+    // static create<T>(name: string, value: T): IProperty;
 }
 
 export interface IObject {
@@ -22,3 +23,4 @@ export interface IObjectRef {
     parent: IObjectRef;
     children: IObjectRef[];
 }
+
