@@ -1,24 +1,24 @@
 
 
 
-export interface Value {
+export interface IValue {
     // value:object;
 }
 
-export interface Property {
+export interface IProperty {
     name:string;
-    value:Value;
+    value:IValue;
 }
 
-export interface Object {
+export interface IObject {
     id: string;
-    type: Object;
-    properties:Property[];
+    type: IObject;
+    properties:IProperty[];
 }
 
-export interface ObjectRef { 
+export interface IObjectRef {
     name: string;
-    object: Object;
-    parent: ObjectRef;
-    children: ObjectRef[];
+    object: IObject;
+    parent: IObjectRef;
+    children: IObjectRef[];
 }

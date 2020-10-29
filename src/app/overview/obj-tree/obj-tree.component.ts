@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ObjectService } from 'src/app/services/object.service';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { Object, ObjectRef } from 'src/app/interfacess/object';
+import { IObject, IObjectRef } from 'src/app/interfacess/object';
 
 @Component({
   selector: 'app-obj-tree',
@@ -11,8 +11,8 @@ import { Object, ObjectRef } from 'src/app/interfacess/object';
 })
 export class ObjTreeComponent implements OnInit {
 
-  treeControl = new NestedTreeControl<ObjectRef>(node => node.children);
-  dataSource = new MatTreeNestedDataSource<ObjectRef>();
+  treeControl = new NestedTreeControl<IObjectRef>(node => node.children);
+  dataSource = new MatTreeNestedDataSource<IObjectRef>();
 
   constructor(private objctService: ObjectService) {
     this.dataSource.data = [objctService.getObjectHierarchy()];
@@ -21,5 +21,5 @@ export class ObjTreeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  hasChild = (_: number, node: ObjectRef) => !!node.children && node.children.length > 0;
+  hasChild = (_: number, node: IObjectRef) => !!node.children && node.children.length > 0;
 }
